@@ -17,8 +17,8 @@ class GSMAParser {
         $this->parseBrands();
         echo count( $this->brands) . ' parsed brands'. "\n";
         
-        $this->parseModels();
-        echo $this->models . ' parsed models'. "\n";
+        //$this->parseModels();
+        //echo $this->models . ' parsed models'. "\n";
     }
 
     function parseBrands(){
@@ -28,6 +28,8 @@ class GSMAParser {
         $i = 0;
         $temp = array();
         foreach ($html->find("div.st-text a") as $el) {
+            
+            var_dump($el);
             
             if($i % 2 == 0){
                 $img = $el->find('img',0);
