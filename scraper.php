@@ -27,7 +27,7 @@ class GSMAParser {
     
         $i = 0;
         $temp = array();
-        foreach ($html->find("div.st-text a") as $el) {
+        foreach ($html->find("#body > div > div.st-text > table > tbody > tr:nth-child(1) > td:nth-child(1) > a") as $el) {
             
             var_dump($el);
             
